@@ -1,0 +1,379 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+div {
+  box-sizing: border-box;
+}
+body {
+  font-size: $body-large-mobile;
+  @include tablet {
+    font-size: $body-large;
+  }
+}
+
+.inventoryDetails {
+  background-color: $primary-light;
+  @include wrapper-mr;
+}
+.in-pageHeader {
+  display: flex;
+  flex-direction: column;
+  padding: 0 24px;
+  justify-content: space-between;
+  padding: $space-between-items-lg;
+  padding-top: $space-outside-items-md + 10px;
+  border-bottom: 1px solid $secondary-light;
+  @include tablet {
+    border: none;
+    display: flex;
+    flex-direction: row;
+    padding: 24px 32px 8px; 
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  &__addItemBtn {
+    background-color: $primary-accent;
+    padding: 12px;
+    color: $primary-light;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    border-radius: 20px;
+    font-size: 13px;
+    &:hover {
+      background-color: $bgcolor-dark;
+    }
+    @include tablet {
+      font-size: 14px;
+    }
+  }
+  &__iconBtnTxt {
+    display: none;
+    @include tablet {
+      display: block;
+    }
+  }
+
+  &__iconColor {
+    filter: brightness(100);
+    padding-right: 4px;
+  }
+
+  &__warehouse-name {
+    font-size: $page-header-mobile;
+    font-weight: $bold;
+    @include tablet {
+      font-size: $page-header;
+      padding-left: 0;
+    }
+    @include desktop {
+      padding-left: 0;
+    }
+    
+  }
+  &__flexbox {
+    @include tablet {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-direction: row;
+      justify-content: space-between; 
+    }
+    @include desktop {
+      width: 50%;
+      justify-content: space-between; 
+      gap: 0;
+    }
+  
+  }
+}
+
+.in-stillBox {
+  display: none;
+  grid-template-columns: [box1] 1.2fr [box2] 1.2fr;
+  align-items: center;
+  padding-top: $space-between-items-sm;
+  padding-bottom: $space-between-items-sm;
+  font-size: $labels;
+  font-weight: $bold;
+  color: $secondary-dark;
+
+  @include tablet {
+    padding-left: $space-between-items-lg;
+    padding-right: $space-between-items-lg;
+    padding: 0 32px;
+    display: grid;
+    grid-template-columns: [box1] 1.4fr [box3] 1fr [box2] 1fr [box4] 0.8fr[box5] 1fr [box6]0.4fr;
+    font-size: 12px;
+  }
+  &__box1 {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  &__box2 {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  &__box3 {
+    display: flex;
+    gap: 0.25rem;
+  }
+  &__box4 {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  &__box5 {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  &__box6 {
+    margin-left: auto;
+  }
+  &__arrowSort{
+    height: 18px;
+  }
+}
+
+.in-magicBox {
+  padding: 0 24px;
+  padding-top: $space-between-items-sm + 2px;
+  padding-bottom: $space-between-items-sm + 2px;
+  display: grid;
+  grid-template-columns: [box1] 1.2fr [box2] 1.2fr;
+  font-size: 13px;
+  border-bottom: 1px solid $secondary-light;
+  &:hover {
+    background-color: rgba(46, 102, 229, 0.07);
+  }
+
+  @include tablet {
+    padding-left: 32px;
+    padding-right: 32px;
+    
+    font-size: 14px;
+    grid-template-columns: [box1] 1.4fr [box3] 1fr [box2] 1fr [box4] 0.8fr[box5] 1fr [box6]0.4fr;
+  }
+
+  &__labelMobile {
+    color: $secondary-dark;
+    font-weight: $bold;
+    font-size: 11px;
+    @include tablet {
+      display: none;
+    }
+  }
+  &__box1 {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: $space-between-items-lg;
+    @include tablet {
+      flex-direction: row;
+      padding-bottom: 0;
+    }
+    font-weight: $bold;
+    color: $primary-accent;
+    text-transform: capitalize;
+  }
+  &__box2 {
+    grid-row-start: box3;
+    @include tablet {
+      grid-row-start: -1;
+      grid-column-end: box2;
+    }
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+      display: block;
+    }
+  }
+  &__box3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @include tablet {
+      display: block;
+    }
+  }
+  &__box4 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @include tablet {
+      display: block;
+    }
+  }
+  &__box5 {
+    padding-top: $space-outside-items-sm;
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+      margin-right: auto;
+      padding-top: 0;
+    }
+  }
+  &__box6 {
+    margin-top: auto;
+    margin-right: auto;
+    display: flex;
+    gap: 5px;
+    padding-right: $space-between-items-sm;
+  }
+
+  &__labelItem {
+    display: flex;
+    align-items: center;
+    color: $primary-accent;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__labelItem img {
+    margin-left: .5rem;
+  }
+  &__warehouseNameValue {
+    text-align: left;
+    margin-right: auto;
+  }
+
+  &__chevron {
+    position: relative;
+    left: -20px;
+    @include tablet {
+      left: 10px;
+    }
+  }
+
+  &__inStock {
+    background-color: rgba(20, 133, 99, 0.07);
+    border-radius: 20px;
+    padding: 2px 14px;
+    margin-top: 4px;
+    font-size: 13px;
+    color: $sup-green;
+    font-weight: $bold;
+    position: relative;
+    left: -8px;
+    @include tablet {
+      padding: 8px 12px;
+      margin-top: 0px;
+      font-size: 14px;
+    }
+  }
+  &__outOfStock {
+    background-color: rgba(201, 69, 21, 0.07);
+    border-radius: 20px;
+    padding: 2px 14px;
+    margin-top: 4px;
+    font-size: $labels;
+    color: $sup-red;
+    font-weight: $bold;
+    position: relative;
+    left: -8px;
+    @include tablet {
+      padding: 8px 12px;
+      margin-top: 0px;
+    }
+  }
+  &__link {
+    text-decoration: none;
+  }
+}
+
+.flexbox {
+  display: flex;
+}
+
+.magicBox__box5 {
+  &__modal {
+    background-color:$primary-light;
+    border-radius: 3px;
+    height: 83vh;
+    padding: 3.75rem 1rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &__close {
+      position: absolute;
+      top: 10%;
+      right: 5%;
+    }
+    &--title {
+      font-size: $page-header-mobile;
+      line-height: 2.25rem;
+      margin-bottom: 1rem;
+      margin-top: 2.5rem;
+    }
+    &--text{
+      font-size: $body-large-mobile;
+      line-height: 1.625rem;
+    }
+    &--div{
+      padding-bottom: auto;
+      display: flex;
+      justify-content: space-between;
+      @include tablet {
+        width: 30%;
+        margin-left: auto;
+      }
+    }
+    &--btn {
+      display: flex;  
+      align-items: center;
+      justify-content: center;
+      border-radius: 25px;
+      padding: 0.5rem;
+      border: none;
+      font-weight: 600;
+      height: 2.375rem;
+      margin: 1rem 0;
+      
+      &--cancel {
+        width: 47%;
+        border: 1px solid $secondary-light;
+        background-color: $primary-light;
+        color: $primary-dark;
+        &:hover {
+          color: $primary-accent;
+          background-color: $primary-light;
+          transition: .5s;
+        }
+      }
+      &--delete {
+        width: 47%;
+        background-color: $sup-red;
+        color: $primary-light;
+        &:hover {
+          background-color: $bgcolor-dark;
+          transition: .5s;
+        }
+      }
+    }
+    
+  }
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}

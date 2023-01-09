@@ -1,0 +1,15 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.edit-wrhse{
+   margin-top: 15px;
+   font-weight: $bold;
+   @include wrapper-mr;
+   background-color: $primary-light;
+   @include tablet{
+      margin-top: 8px;
+   }
+   @include desktop{
+      margin-top: 27px;
+   }
+}
