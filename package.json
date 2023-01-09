@@ -6,12 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "client": "cd instock-client && npm start",
-    "server": "cd instock_server && npm start",
+    "server": "cd instock-server && npm start",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "concurrently": "^7.6.0"
   }
 }
