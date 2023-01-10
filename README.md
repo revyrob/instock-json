@@ -1,7 +1,7 @@
 # 🚀 Instock Responsive Application -  JSON Backend 
-Group project completed within 5 days with 2 other Software Engineers during the Brainstation Sofware Engineering Diploma Course 
+A Web Appliacation with CRUD functionality.  A variety of warehouses, their information, and the inventory within them.  The user is able to add, edit, and delete information within the warehouses and the inventory.  Group project completed within 5 days with 2 other Software Engineers during the Brainstation Sofware Engineering Diploma Course.   
 
-## Team
+## 👩‍💻Team👨‍💻
 <li>Kayle Robson</li>
 <li>Andre Fourlem</li>
 <li>Nikhil Shetye</li>
