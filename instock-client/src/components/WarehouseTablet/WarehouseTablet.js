@@ -10,7 +10,7 @@ import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
 
 //use the onclick function in the article component and not ArticleList because the articles are the onclick events
-function WarehouseTablet({
+export default function WarehouseTablet({
   id,
   warehouse,
   address,
@@ -22,6 +22,9 @@ function WarehouseTablet({
 }) {
   //two columns
 
+  //use state for new array
+  //const [newArray, setNewArray] = useState({ warehouseArr });
+  //console.log(warehouseArr);
   /*
    *Modal code
    */
@@ -52,6 +55,7 @@ function WarehouseTablet({
       .delete(`${REACT_APP_API_SERVER_URL}/warehouse/${id}`)
       .then((response) => {
         navigate("/warehouses");
+        //setNewArray(response);
         refreshPage();
         closeModal();
       })
@@ -155,4 +159,3 @@ function WarehouseTablet({
     </section>
   );
 }
-export default WarehouseTablet;
