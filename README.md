@@ -6,6 +6,9 @@ A Web Appliacation with CRUD functionality.  A variety of warehouses, their info
 <li>Andre Fourlem</li>
 <li>Nikhil Shetye</li>
 
+## 📽️ Demo
+![React App - Google Chrome 2023-03-20 21-25-30](https://user-images.githubusercontent.com/66695865/226522121-3c64dd27-7520-469e-904d-830c0a783ba4.gif)
+
 
 ## 💻 Built with
 <li>React</li>
